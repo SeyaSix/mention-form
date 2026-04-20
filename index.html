@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions Légales</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            
+            <h1>Mentions Légales</h1>
+            
+        </header>
+
+        <form id="mentionsForm">
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label for="nomSociete">Nom de la société</label>
+                    <input type="text" id="nomSociete" placeholder="Ex : Ma Société SAS" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="siret">Numéro de SIRET</label>
+                    <input type="text" id="siret" placeholder="Ex : 123 456 789 00012" required>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="nomResponsables">Nom des responsables</label>
+                    <input type="text" id="nomResponsables" placeholder="Ex : Jean Dupont, Marie Martin" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="editeurPublication">Éditeur de la publication</label>
+                    <input type="text" id="editeurPublication" placeholder="Nom ou raison sociale" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="directeurPublication">Directeur de la publication</label>
+                    <input type="text" id="directeurPublication" placeholder="Nom complet" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="responsableRedaction">Responsable de la rédaction</label>
+                    <input type="text" id="responsableRedaction" placeholder="Nom complet" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="hebergeur">Hébergeur</label>
+                    <input type="text" id="hebergeur" placeholder="Ex : OVH, 2 rue Kellermann, 59100 Roubaix" required>
+                </div>
+
+            </div>
+
+            <div class="actions">
+                <button type="button" id="resetBtn" class="btn btn-secondary">Réinitialiser</button>
+                <button type="submit" class="btn btn-primary">
+                    <span class="btn-icon">📄</span>
+                    Générer le PDF
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
