@@ -16,6 +16,10 @@ function generatePDF() {
     const doc = new jsPDF({ unit: 'mm', format: 'a4' });
 
     const data = {
+        nomPrenom:           getVal('nomPrenom'),
+        statut:              getVal('statut'),
+        ville:               getVal('ville'),
+        contact:             getVal('contact'),
         nomSociete:          getVal('nomSociete'),
         siret:               getVal('siret'),
         nomResponsables:     getVal('nomResponsables'),
@@ -69,6 +73,15 @@ function generatePDF() {
     let y = 52;
 
     const sections = [
+        {
+            title: 'IDENTITÉ',
+            fields: [
+                { label: 'Nom / Prénom',  value: data.nomPrenom },
+                { label: 'Statut',        value: data.statut },
+                { label: 'Ville',         value: data.ville },
+                { label: 'Contact',       value: data.contact },
+            ],
+        },
         {
             title: 'INFORMATIONS GÉNÉRALES',
             fields: [
